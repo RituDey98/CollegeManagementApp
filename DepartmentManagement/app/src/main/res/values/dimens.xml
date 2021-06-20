@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- margins-->
+    <dimen name="margin_extra_small">5dp</dimen>
+    <dimen name="margin_small">10dp</dimen>
+    <dimen name="margin_medium">15dp</dimen>
+    <dimen name="margin_large">20dp</dimen>
+    <dimen name="margin_extra_large">25dp</dimen>
+
+
+    <!-- Padding-->
+    <dimen name="padding_extra_small">5dp</dimen>
+    <dimen name="padding_small">10dp</dimen>
+    <dimen name="padding_medium">15dp</dimen>
+    <dimen name="padding_large">20dp</dimen>
+    <dimen name="padding_extra_large">25dp</dimen>
+
+
+    <!-- Padding-->
+    <dimen name="text_extra_small">12sp</dimen>
+    <dimen name="text_small">15sp</dimen>
+    <dimen name="text_medium">18sp</dimen>
+    <dimen name="text_large">22sp</dimen>
+    <dimen name="text_extra_large">25sp</dimen>
+
+
+    <!-- elevation-->
+    <dimen name="elev_small">2dp</dimen>
+    <dimen name="elev_medium">5dp</dimen>
+    <dimen name="elev_large">8dp</dimen>
+
+</resources>
