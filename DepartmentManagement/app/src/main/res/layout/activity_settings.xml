@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="horizontal"
-    tools:context=".Settings">
+    tools:context=".Activities.Settings">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -13,7 +13,7 @@
         android:layout_height="match_parent">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+            android:id="@+id/settings_toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/purple_500"
@@ -22,7 +22,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:navigationIcon="@drawable/ic_baseline_arrow_back_24"
+            app:navigationIcon="?attr/homeAsUpIndicator"
             app:title="Settings"
             app:titleTextColor="@color/white" />
 
@@ -36,7 +36,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.022"
-            app:srcCompat="@android:drawable/ic_menu_edit" />
+            android:src="@drawable/ic_baseline_edit_24" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

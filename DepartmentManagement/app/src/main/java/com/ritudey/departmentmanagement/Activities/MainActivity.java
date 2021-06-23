@@ -11,11 +11,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.Window;
 
 import com.google.android.material.navigation.NavigationView;
 import com.ritudey.departmentmanagement.R;
-import com.ritudey.departmentmanagement.Settings;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -55,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
+
     @Override
     public boolean onNavigationItemSelected(@NonNull  MenuItem item) {
         return true;
@@ -79,7 +78,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             return true;
         }
-
 
         return super.onOptionsItemSelected(item);
     }
