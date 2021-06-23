@@ -1,3 +1,21 @@
 <resources>
     <string name="app_name">Department Management</string>
+
+
+    <!--nav menu-->
+    <string name="department">Department</string>
+    <string name="notes">Notes</string>
+    <string name="notice">Notice</string>
+    <string name="qna">Qna</string>
+    <string name="student_info">Student Info</string>
+    <string name="attendence">Attendence</string>
+    <string name="library">Library</string>
+    <string name="log_out">log out</string>
+
+
+    <string name="nav_open">open navigation drawer</string>
+    <string name="nav_close">close navigation drawer</string>
+    <string name="settings">Settings</string>
+
+
 </resources>

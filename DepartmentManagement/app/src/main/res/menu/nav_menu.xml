@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:id="@+id/Menu_Dept"
+        android:title="@string/department">
+
+        <menu>
+
+            <group android:checkableBehavior="single">
+
+                <item android:id="@+id/Menu_Notes"
+                    android:title="@string/notes" />
+
+                <item android:id="@+id/Menu_Notice"
+                    android:title="@string/notice"/>
+
+                <item android:id="@+id/Menu_Qna"
+                    android:title="@string/qna"/>
+
+                <item android:id="@+id/Menu_Info"
+                    android:title="@string/student_info"/>
+
+            </group>
+
+        </menu>
+
+    </item>
+
+
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/Menu_attendence"
+            android:title="@string/attendence"/>
+
+        <item android:id="@+id/Menu_library"
+            android:title="@string/library"/>
+
+    </group>
+
+
+</menu>
