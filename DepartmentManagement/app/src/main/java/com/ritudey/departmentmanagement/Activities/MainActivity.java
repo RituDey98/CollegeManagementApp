@@ -26,12 +26,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Initializing Views
         drawerLayout = findViewById(R.id.drawerLayout);
         toolbar=findViewById(R.id.toolbar);
         navigationView=findViewById(R.id.navigation_view);
 
+
+
+        //setting toolbar
         setSupportActionBar(toolbar);
 
+
+
+
+        //Navigation Drawer
         navigationView.bringToFront();
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.nav_open,R.string.nav_close);
         drawerLayout.addDrawerListener(toggle);
@@ -41,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
+    //Navigation drawer OnBackPressed
     @Override
     public void onBackPressed() {
 
@@ -50,9 +59,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         else {
             super.onBackPressed();
         }
-
     }
-
 
     @Override
     public boolean onNavigationItemSelected(@NonNull  MenuItem item) {
@@ -60,12 +67,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
 
+
+
+    //Settings icon
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.my_menu,menu);
         return super.onCreateOptionsMenu(menu);
     }
 
+
+    //setting menu onClickListener
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
@@ -73,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (id == R.id.settings)
         {
-            Intent intent = new Intent(MainActivity.this, Settings.class);
+            Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
             startActivity(intent);
 
             return true;

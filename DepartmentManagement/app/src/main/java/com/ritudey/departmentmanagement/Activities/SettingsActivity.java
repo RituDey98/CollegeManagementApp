@@ -8,7 +8,7 @@ import android.view.View;
 
 import com.ritudey.departmentmanagement.R;
 
-public class Settings extends AppCompatActivity {
+public class SettingsActivity extends AppCompatActivity {
 
     Toolbar toolbar;
 
