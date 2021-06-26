@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Fragments.DepartmentFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:paddingTop="@dimen/padding_medium">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/notice_card_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/cardview_light_background"
+            app:layout_constraintWidth_percent="0.45"
+            app:layout_constraintHeight_percent="0.45"
+            android:layout_margin="@dimen/margin_small"
+            android:elevation="@dimen/elev_medium">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:weightSum="2">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_baseline_assignment_24"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_weight="1.8"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NOTICE"
+                    android:textColor="@color/purple_500"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_large"
+                    android:padding="@dimen/padding_medium"
+                    android:gravity="center"
+                    android:background="@color/teal_700"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_weight="0.2"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/notes_card_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/cardview_light_background"
+            app:layout_constraintWidth_percent="0.45"
+            app:layout_constraintHeight_percent="0.45"
+            android:layout_margin="@dimen/margin_small"
+            android:elevation="@dimen/elev_medium">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:weightSum="2">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_baseline_assignment_24"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_weight="1.8"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="NOTES"
+                    android:textStyle="bold"
+                    android:textColor="@color/purple_500"
+                    android:textSize="@dimen/text_large"
+                    android:padding="@dimen/padding_medium"
+                    android:gravity="center"
+                    android:background="@color/teal_700"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_weight="0.2"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/qna_card_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/notice_card_view"
+            android:background="@color/cardview_light_background"
+            app:layout_constraintWidth_percent="0.45"
+            app:layout_constraintHeight_percent="0.45"
+            android:layout_margin="@dimen/margin_small"
+            android:elevation="@dimen/elev_medium">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_baseline_assignment_24"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_weight="1.8"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="QNA"
+                    android:textColor="@color/purple_500"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_large"
+                    android:padding="@dimen/padding_medium"
+                    android:gravity="center"
+                    android:background="@color/teal_700"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_weight="0.2"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/student_info_card_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/notes_card_view"
+            android:background="@color/cardview_light_background"
+            app:layout_constraintWidth_percent="0.45"
+            app:layout_constraintHeight_percent="0.45"
+            android:layout_margin="@dimen/margin_small"
+            android:elevation="@dimen/elev_medium">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/ic_baseline_assignment_24"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:layout_weight="1.8"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="INFO"
+                    android:textColor="@color/purple_500"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/text_large"
+                    android:padding="@dimen/padding_medium"
+                    android:gravity="center"
+                    android:background="@color/teal_700"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_weight="0.2"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+

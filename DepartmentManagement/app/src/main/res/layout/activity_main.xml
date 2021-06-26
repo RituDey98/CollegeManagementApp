@@ -16,6 +16,7 @@
         app:headerLayout="@layout/nav_header"
         app:menu="@menu/nav_menu"
         android:layout_gravity="start"
+        app:itemIconTint="@color/white"
         />
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -47,15 +48,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:tabTextColor="@color/black"
-                app:tabIndicatorColor="@color/white"
-                app:tabSelectedTextColor="@color/white"
-                android:background="@color/purple_700"/>
+                app:tabIndicatorColor="@color/purple_700"
+                app:tabSelectedTextColor="@color/purple_700"
+                android:background="@color/teal_700"/>
 
-            <androidx.viewpager.widget.ViewPager
+            <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/main_view_pager"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                app:layout_constraintTop_toBottomOf="@+id/tab_layout"/>
+                android:layout_height="match_parent" />
 
 
         </LinearLayout>

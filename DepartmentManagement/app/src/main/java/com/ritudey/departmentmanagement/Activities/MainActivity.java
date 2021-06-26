@@ -6,20 +6,35 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentManager;
+import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.tabs.TabLayout;
+import com.ritudey.departmentmanagement.Adapters.FragmentAdapter;
 import com.ritudey.departmentmanagement.R;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
+
+    private static final String TAG = "MainActivity";
     DrawerLayout drawerLayout;
     Toolbar toolbar;
     NavigationView navigationView;
+    //ViewPager mainViewPager;
+    ViewPager2 viewPager2;
+    TabLayout mainTabLayout;
+    ArrayList<String> arrayList;
+    FragmentAdapter fragmentAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,12 +45,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout = findViewById(R.id.drawerLayout);
         toolbar=findViewById(R.id.toolbar);
         navigationView=findViewById(R.id.navigation_view);
+        mainTabLayout=findViewById(R.id.main_tab_layout);
+        viewPager2=findViewById(R.id.main_view_pager);
 
 
 
         //setting toolbar
         setSupportActionBar(toolbar);
-
 
 
 
@@ -47,7 +63,62 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         navigationView.setNavigationItemSelectedListener(this);
 
+
+        /**Adding View pager and Tab layout*/
+
+        prepareViewPager(viewPager2);
+
+
+
+
     }
+
+
+
+
+
+
+    private void prepareViewPager(ViewPager2 viewPager2) {
+        //initializing main adapter
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentAdapter = new FragmentAdapter(fragmentManager,getLifecycle());
+        viewPager2.setAdapter(fragmentAdapter);
+
+        mainTabLayout.addTab(mainTabLayout.newTab().setText("Department"));
+        mainTabLayout.addTab(mainTabLayout.newTab().setText("Attendance"));
+        mainTabLayout.addTab(mainTabLayout.newTab().setText("Library"));
+
+        mainTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                viewPager2.setCurrentItem(tab.getPosition());
+                Log.d(TAG, "onTabSelected: "+String.valueOf(tab.getPosition()));
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
+
+        viewPager2.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
+            @Override
+            public void onPageSelected(int position) {
+                mainTabLayout.selectTab(mainTabLayout.getTabAt(position));
+            }
+        });
+    }
+
+
+
+
+
 
     //Navigation drawer OnBackPressed
     @Override
