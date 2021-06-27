@@ -9,18 +9,20 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DepartmentManagement">
-        <activity android:name=".Activities.StudentInfoActivity"></activity>
-        <activity android:name=".Activities.QnaActivity" />
-        <activity android:name=".Activities.NotesActivity" />
-        <activity android:name=".Activities.NoticeActivity" />
-        <activity android:name=".Activities.SettingsActivity" />
-        <activity android:name=".Activities.MainActivity">
+        <activity android:name=".Activities.SelectRoleActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Activities.NewPostActivity" />
+        <activity android:name=".Activities.StudentInfoActivity" />
+        <activity android:name=".Activities.QnaActivity" />
+        <activity android:name=".Activities.NotesActivity" />
+        <activity android:name=".Activities.NoticeActivity" />
+        <activity android:name=".Activities.SettingsActivity" />
+        <activity android:name=".Activities.MainActivity"/>
     </application>
 
 </manifest>
