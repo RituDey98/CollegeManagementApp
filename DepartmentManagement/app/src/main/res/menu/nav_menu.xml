@@ -2,41 +2,34 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-    <item android:id="@+id/Menu_Dept"
+    <item android:id="@+id/menu_dept"
         android:title="@string/department">
 
         <menu>
 
-            <group android:checkableBehavior="single">
-
-                <item android:id="@+id/Menu_Notes"
+                <item android:id="@+id/menu_notes"
                     android:title="@string/notes" />
 
-                <item android:id="@+id/Menu_Notice"
+                <item android:id="@+id/menu_notice"
                     android:title="@string/notice"/>
 
-                <item android:id="@+id/Menu_Qna"
+                <item android:id="@+id/menu_qna"
                     android:title="@string/qna"/>
 
-                <item android:id="@+id/Menu_Info"
+                <item android:id="@+id/menu_info"
                     android:title="@string/student_info"/>
-
-            </group>
 
         </menu>
 
     </item>
 
 
-    <group android:checkableBehavior="single">
-
-        <item android:id="@+id/Menu_attendence"
+        <item android:id="@+id/menu_attendence"
             android:title="@string/attendence"/>
 
-        <item android:id="@+id/Menu_library"
+        <item android:id="@+id/menu_library"
             android:title="@string/library"/>
 
-    </group>
 
 
 </menu>

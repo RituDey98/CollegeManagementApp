@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="@dimen/elev_medium"
+    android:layout_marginVertical="@dimen/margin_small"
+    android:layout_marginHorizontal="@dimen/elev_medium">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/notice_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Heading"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:padding="@dimen/padding_large"
+            />
+
+        <TextView
+            android:id="@+id/notice_date_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/notice_text_view"
+            android:textSize="15sp"
+            android:padding="@dimen/padding_medium"/>
+        <TextView
+            android:id="@+id/notice_body_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Body"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/notice_date_text_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="15sp"
+            android:padding="@dimen/padding_medium"/>
+        <ImageView
+            android:id="@+id/notice_img_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_launcher_background"
+            app:layout_constraintTop_toBottomOf="@id/notice_body_text_view"
+            android:scaleType="centerCrop"/>
+
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

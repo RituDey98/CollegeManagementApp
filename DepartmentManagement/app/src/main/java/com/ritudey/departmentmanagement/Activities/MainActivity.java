@@ -19,12 +19,12 @@ import android.view.MenuItem;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.ritudey.departmentmanagement.Adapters.FragmentAdapter;
+import com.ritudey.departmentmanagement.Fragments.AttendanceFragment;
 import com.ritudey.departmentmanagement.R;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
-
 
     private static final String TAG = "MainActivity";
     DrawerLayout drawerLayout;
@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
 
 
+
         //setting toolbar
         setSupportActionBar(toolbar);
 
@@ -59,9 +60,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         navigationView.bringToFront();
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.nav_open,R.string.nav_close);
         drawerLayout.addDrawerListener(toggle);
+        toggle.setDrawerIndicatorEnabled(true);
         toggle.syncState();
 
         navigationView.setNavigationItemSelectedListener(this);
+
 
 
         /**Adding View pager and Tab layout*/
@@ -134,7 +137,20 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onNavigationItemSelected(@NonNull  MenuItem item) {
+      if(item.getItemId() == R.id.menu_notes){
+          startActivity(new Intent(MainActivity.this,NotesActivity.class));
+      }
+        if(item.getItemId() == R.id.menu_notice){
+            startActivity(new Intent(MainActivity.this,NoticeActivity.class));
+        }
+        if(item.getItemId() == R.id.menu_qna){
+            startActivity(new Intent(MainActivity.this,QnaActivity.class));
+        }
+        if(item.getItemId() == R.id.menu_info){
+            startActivity(new Intent(MainActivity.this,StudentInfoActivity.class));
+        }
         return true;
+
     }
 
 
