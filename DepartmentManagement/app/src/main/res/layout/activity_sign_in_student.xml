@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.SignInStudentActivity">
+
+    <TextView
+        android:id="@+id/sign_in_textView_student"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="75dp"
+        android:gravity="center_horizontal"
+        android:text="sign In"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+         />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutEmail_student_sign_in"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:textColorHint="@color/black"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/email"
+        android:hint="email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_in_textView_student">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEditTextEmail_student_sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutYear_student_sign_in"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:textColorHint="@color/black"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/year"
+        android:hint="semester"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutEmail_student_sign_in">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEditTextYear_student_sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutDepartment_student_sign_in"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:textColorHint="@color/black"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/department"
+        android:hint="department"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutYear_student_sign_in">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEditTextDept_student_sign_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutPassword_student_sign_in"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginRight="35dp"
+        android:textColorHint="@color/black"
+        app:endIconMode="password_toggle"
+        app:startIconDrawable="@drawable/lock"
+        android:hint="password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutDepartment_student_sign_in">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/textInputEditTextPassword_student_sign_in"
+            android:inputType="textWebPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/sign_in_button_student"
+        android:layout_width="140dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="5dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetLeft="0dp"
+        android:insetBottom="0dp"
+        android:text="sign in"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:backgroundTint="#00BCD4"
+        app:elevation="0dp"
+        app:iconPadding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutPassword_student_sign_in" />
+
+    <Button
+        android:id="@+id/f_p_button_student_sign_in"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetLeft="0dp"
+        android:insetBottom="0dp"
+        android:text="forgot password"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="#00BCD4"
+        app:elevation="0dp"
+        app:iconPadding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_in_button_student" />
+
+    <Button
+        android:id="@+id/d_h_a_a_button_student_sign_in"
+        android:layout_width="350dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetLeft="0dp"
+        android:insetBottom="0dp"
+        android:text="don't have an account sign up"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="#00BCD4"
+        app:elevation="0dp"
+        app:iconPadding="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/f_p_button_student_sign_in" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
